@@ -2,7 +2,7 @@ library('stats')
 library('quantmod')
 library('readxl')
 
-USMacroSWQ <- read_xlsx("/Users/GOUTHAM SEKAR/Desktop/us_macro_quarterly.xlsx",
+USMacroSWQ <- read_xlsx("us_macro_quarterly.xlsx",
                         sheet = 1,
                         col_types = c("text", rep("numeric", 9)))
 USMacroSWQ$...1 <- as.yearqtr(USMacroSWQ$...1, format = "%Y:0%q")
